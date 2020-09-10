@@ -36,11 +36,15 @@ recae sobre el controlador.
 # ___________________________________________________
 #  Inicializacion del catalogo
 # ___________________________________________________
-
-
-
-
+def initCatalog():
+    """
+    Llama la funcion de inicializacion del catalogo del modelo.
+    """
+    # catalog es utilizado para interactuar con el modelo
+    catalog = model.newCatalog()
+    return catalog
 # ___________________________________________________
 #  Funciones para la carga de datos y almacenamiento
 #  de datos en los modelos
 # ___________________________________________________
+

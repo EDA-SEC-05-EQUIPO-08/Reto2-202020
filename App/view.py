@@ -21,10 +21,12 @@
  """
 
 import sys
+import csv
 import config
 from DISClib.ADT import list as lt
 from DISClib.DataStructures import listiterator as it
 from App import controller
+from time import process_time 
 assert config
 
 """
@@ -38,18 +40,59 @@ operación seleccionada.
 #  Ruta a los archivos
 # ___________________________________________________
 
-
-
-
-
 # ___________________________________________________
 #  Funciones para imprimir la inforamación de
 #  respuesta.  La vista solo interactua con
 #  el controlador.
 # ___________________________________________________
 
-
+def printMenu():
+    """
+    Imprime el menu de opciones
+    """
+    print("\nBienvenido")
+    print("1- Cargar Datos")
+    print("2- Descubrir productoras de cine")
+    print("3- Conocer a un director")
+    print("4- Conocer a un actor")
+    print("5- Entender un género cinematográfico")
+    print("6- Encontrar películas por país")
+    print("0- Salir")
 
 # ___________________________________________________
 #  Menu principal
 # ___________________________________________________
+def main():
+    """
+    Método principal del programa, se encarga de manejar todos los metodos adicionales creados
+    Instancia una lista vacia en la cual se guardarán los datos cargados desde el archivo
+    Args: None
+    Return: None 
+    """
+    while True:
+        printMenu() #imprimir el menu de opciones en consola
+        inputs =input('Seleccione una opción para continuar\n') #leer opción ingresada
+        if len(inputs)>0:
+            if int(inputs[0])==1: #opcion 1
+                print("Inicializando Catálogo ....")
+                # cont es el controlador que se usará de acá en adelante
+                cont = controller.initCatalog()  
+            elif int(inputs[0])==2: #opcion 2
+                pass
+
+            elif int(inputs[0])==3: #opcion 3
+                pass
+
+            elif int(inputs[0])==4: #opcion 4
+                pass
+
+            elif int(inputs[0])==5: #opcion 5
+                pass
+
+            elif int(inputs[0])==6: #opcion 6
+                pass
+
+            elif int(inputs[0])==0: #opcion 0, salir
+                pass
+if __name__ == "__main__":
+    main()
